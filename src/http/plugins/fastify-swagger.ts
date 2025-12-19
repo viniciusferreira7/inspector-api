@@ -15,5 +15,7 @@ export function fastifySwagger(app: FastifyInstance) {
     transform: jsonSchemaTransform,
   });
 
-  app.register(ScalarApiReference);
+  app.register(ScalarApiReference, {
+    routePrefix: '/docs',
+  });
 }

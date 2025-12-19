@@ -12,6 +12,7 @@ fastifySwagger(app);
 
 app.listen({ port: env.PORT, host: '0.0.0.0' }).then(() => {
   console.log(`HTTP server running on port ${env.PORT}! 🚀`);
+  console.log('📚 Docs available at /docs');
 });
 
 //TODO: 18:00
