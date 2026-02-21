@@ -3,24 +3,11 @@ import {
   check,
   integer,
   jsonb,
-  pgEnum,
   pgTable,
   text,
   timestamp,
 } from 'drizzle-orm/pg-core';
 import { uuidv7 } from 'uuidv7';
-
-export const httpMethodEnum = pgEnum('http_method', [
-  'GET',
-  'POST',
-  'PUT',
-  'PATCH',
-  'DELETE',
-  'OPTIONS',
-  'HEAD',
-  'TRACE',
-  'CONNECT',
-]);
 
 export const webhooks = pgTable(
   'webhooks',
@@ -28,7 +15,7 @@ export const webhooks = pgTable(
     id: text()
       .primaryKey()
       .$defaultFn(() => uuidv7()),
-    method: httpMethodEnum('method').notNull(),
+    method: text().notNull(),
     pathname: text().notNull(),
     ip: text().notNull(),
     statusCode: integer('status_code').notNull(),
