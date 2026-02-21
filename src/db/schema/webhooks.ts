@@ -46,5 +46,3 @@ export const webhooks = pgTable(
     ),
   ]
 );
-
-//TODO: 45:00
