@@ -82,7 +82,13 @@ The API will be available at `http://localhost:3333` and documentation at `http:
 
 ### Webhooks
 
-- `GET /api/webhooks` - List all captured webhooks
+- `GET /api/webhooks` - List captured webhooks (supports cursor-based pagination via `cursor` and `limit` query params)
+- `GET /api/webhooks/:id` - Get a webhook by ID
+- `DELETE /api/webhooks/:id` - Delete a webhook by ID
+
+### External
+
+- `ALL /capture/*` - Capture an incoming webhook request (supports any HTTP method and path)
 
 ## Project Structure
 
