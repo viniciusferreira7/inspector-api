@@ -9,7 +9,7 @@ export const deleteWebhookById: FastifyPluginAsyncZod = async (app) => {
     '/api/webhooks/:id',
     {
       schema: {
-        summary: 'delete webhook by ID',
+        summary: 'Delete webhook by ID',
         operationId: 'deleteWebhookById',
         tags: ['Webhooks'],
         params: z.object({
