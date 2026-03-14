@@ -26,7 +26,7 @@ export const getWebhookById: FastifyPluginAsyncZod = async (app) => {
       const result = await drizzleDb
         .select()
         .from(webhooks)
-        .where(eq(webhooks.id, request.id))
+        .where(eq(webhooks.id, request.params.id))
         .limit(1);
 
       if (!result.length) {
