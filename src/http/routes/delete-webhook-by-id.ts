@@ -24,7 +24,7 @@ export const deleteWebhookById: FastifyPluginAsyncZod = async (app) => {
     async (request, reply) => {
       const result = await drizzleDb
         .delete(webhooks)
-        .where(eq(webhooks.id, request.id))
+        .where(eq(webhooks.id, request.params.id))
         .returning();
 
       if (!result.length) {
