@@ -1,8 +1,8 @@
 # Inspector API
 
-> ⚠️ **Work In Progress** - This project is currently under active development.
-
 A REST API for inspecting and logging webhooks. This service captures incoming webhook requests and stores their details (method, headers, body, query params, etc.) for later inspection and debugging.
+
+This is the back-end of the **Inspector** project. The front-end is available at [viniciusferreira7/inspector-web](https://github.com/viniciusferreira7/inspector-web).
 
 ## Tech Stack
 
